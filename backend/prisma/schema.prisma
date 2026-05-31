@@ -1,0 +1,103 @@
+datasource db {
+  provider = "sqlite" // Change to "postgresql" if using PostgreSQL
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id           String        @id @default(uuid())
+  email        String        @unique
+  password     String
+  name         String
+  role         String        @default("OPERATOR") // ADMIN, OPERATOR
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  ActivityLogs ActivityLog[]
+}
+
+model Intersection {
+  id              String        @id @default(uuid())
+  name            String
+  latitude        Float
+  longitude       Float
+  status          String        @default("ACTIVE") // ACTIVE, OVERRIDE, OFFLINE
+  congestionLevel Float         @default(0.0)      // 0.0 (empty) to 1.0 (gridlock)
+  vehicleCount    Int           @default(0)
+  trafficFlowHistory String? @default("[]")
+  lastUpdated     DateTime      @default(now())
+  
+  Roads           Road[]
+  Signals         Signal[]
+  TrafficFlows    TrafficFlow[]
+  Alerts          Alert[]
+}
+
+model Road {
+  id             String       @id @default(uuid())
+  name           String
+  direction      String       // NORTH, SOUTH, EAST, WEST
+  laneCount      Int          @default(2)
+  capacity       Int          @default(100)      // Max vehicles at one time
+  currentSpeed   Float        @default(50.0)     // km/h
+  intersectionId String
+  intersection   Intersection @relation(fields: [intersectionId], references: [id], onDelete: Cascade)
+}
+
+model Signal {
+  id             String       @id @default(uuid())
+  intersectionId String
+  intersection   Intersection @relation(fields: [intersectionId], references: [id], onDelete: Cascade)
+  mode           String       @default("AUTO")   // AUTO, MANUAL
+  activeState    String       @default("RED")    // RED, YELLOW, GREEN
+  timerSeconds   Int          @default(30)       // Seconds remaining for current light
+  redDuration    Int          @default(30)       // Configured durations
+  yellowDuration Int          @default(5)
+  greenDuration  Int          @default(35)
+  lastStateChange DateTime    @default(now())
+}
+
+model TrafficFlow {
+  id             String       @id @default(uuid())
+  intersectionId String
+  intersection   Intersection @relation(fields: [intersectionId], references: [id], onDelete: Cascade)
+  timestamp      DateTime     @default(now())
+  vehicleCount   Int
+  averageSpeed   Float
+  occupancyRate  Float        // percentage: 0 to 100
+  densityLevel   String       // LOW, MEDIUM, HIGH
+}
+
+model Report {
+  id          String   @id @default(uuid())
+  title       String
+  type        String   // DAILY, WEEKLY, MONTHLY, ANOMALY
+  format      String   // PDF, CSV
+  fileUrl     String
+  generatedBy String   // User Name or "SYSTEM"
+  generatedAt DateTime @default(now())
+  parameters  String   // JSON string representing filters applied
+}
+
+model Alert {
+  id             String       @id @default(uuid())
+  intersectionId String
+  intersection   Intersection @relation(fields: [intersectionId], references: [id], onDelete: Cascade)
+  type           String       // ACCIDENT, CONGESTION, SIGNAL_FAILURE, EMERGENCY_OVERRIDE
+  severity       String       // LOW, MEDIUM, HIGH, CRITICAL
+  message        String
+  status         String       @default("ACTIVE") // ACTIVE, RESOLVED
+  createdAt      DateTime     @default(now())
+  resolvedAt     DateTime?
+}
+
+model ActivityLog {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  action      String
+  description String
+  timestamp   DateTime @default(now())
+}

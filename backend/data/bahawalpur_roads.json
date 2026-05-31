@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Jinnah Road & Katchery Street",
+    "latitude": 29.3970,
+    "longitude": 71.6830,
+    "status": "ACTIVE",
+    "congestionLevel": 0.65,
+    "vehicleCount": 120,
+    "trafficFlowHistory": "[{\"timestamp\":\"2026-05-28T05:00:00.000Z\",\"vehicleCount\":120,\"averageSpeed\":35,\"congestionLevel\":0.65},{\"timestamp\":\"2026-05-28T04:55:00.000Z\",\"vehicleCount\":110,\"averageSpeed\":38,\"congestionLevel\":0.58},{\"timestamp\":\"2026-05-28T04:50:00.000Z\",\"vehicleCount\":95,\"averageSpeed\":45,\"congestionLevel\":0.48},{\"timestamp\":\"2026-05-28T04:45:00.000Z\",\"vehicleCount\":80,\"averageSpeed\":52,\"congestionLevel\":0.40}]"
+  },
+  {
+    "name": "Farid Gate Circular Road",
+    "latitude": 29.3920,
+    "longitude": 71.6880,
+    "status": "ACTIVE",
+    "congestionLevel": 0.45,
+    "vehicleCount": 75,
+    "trafficFlowHistory": "[{\"timestamp\":\"2026-05-28T05:00:00.000Z\",\"vehicleCount\":75,\"averageSpeed\":48,\"congestionLevel\":0.45},{\"timestamp\":\"2026-05-28T04:55:00.000Z\",\"vehicleCount\":85,\"averageSpeed\":44,\"congestionLevel\":0.50},{\"timestamp\":\"2026-05-28T04:50:00.000Z\",\"vehicleCount\":90,\"averageSpeed\":42,\"congestionLevel\":0.55},{\"timestamp\":\"2026-05-28T04:45:00.000Z\",\"vehicleCount\":70,\"averageSpeed\":50,\"congestionLevel\":0.40}]"
+  },
+  {
+    "name": "Abdul Qadir Bazaar & D-Gate Road",
+    "latitude": 29.3880,
+    "longitude": 71.6790,
+    "status": "ACTIVE",
+    "congestionLevel": 0.85,
+    "vehicleCount": 185,
+    "trafficFlowHistory": "[{\"timestamp\":\"2026-05-28T05:00:00.000Z\",\"vehicleCount\":185,\"averageSpeed\":22,\"congestionLevel\":0.85},{\"timestamp\":\"2026-05-28T04:55:00.000Z\",\"vehicleCount\":170,\"averageSpeed\":25,\"congestionLevel\":0.80},{\"timestamp\":\"2026-05-28T04:50:00.000Z\",\"vehicleCount\":160,\"averageSpeed\":28,\"congestionLevel\":0.75},{\"timestamp\":\"2026-05-28T04:45:00.000Z\",\"vehicleCount\":140,\"averageSpeed\":32,\"congestionLevel\":0.70}]"
+  },
+  {
+    "name": "Baghdad-ul-Jadeed Campus Road",
+    "latitude": 29.3620,
+    "longitude": 71.7100,
+    "status": "ACTIVE",
+    "congestionLevel": 0.30,
+    "vehicleCount": 45,
+    "trafficFlowHistory": "[{\"timestamp\":\"2026-05-28T05:00:00.000Z\",\"vehicleCount\":45,\"averageSpeed\":55,\"congestionLevel\":0.30},{\"timestamp\":\"2026-05-28T04:55:00.000Z\",\"vehicleCount\":50,\"averageSpeed\":53,\"congestionLevel\":0.35},{\"timestamp\":\"2026-05-28T04:50:00.000Z\",\"vehicleCount\":40,\"averageSpeed\":58,\"congestionLevel\":0.28},{\"timestamp\":\"2026-05-28T04:45:00.000Z\",\"vehicleCount\":35,\"averageSpeed\":60,\"congestionLevel\":0.25}]"
+  },
+  {
+    "name": "Noor Mahal Cantt Road",
+    "latitude": 29.3850,
+    "longitude": 71.6920,
+    "status": "ACTIVE",
+    "congestionLevel": 0.50,
+    "vehicleCount": 90,
+    "trafficFlowHistory": "[{\"timestamp\":\"2026-05-28T05:00:00.000Z\",\"vehicleCount\":90,\"averageSpeed\":42,\"congestionLevel\":0.50},{\"timestamp\":\"2026-05-28T04:55:00.000Z\",\"vehicleCount\":95,\"averageSpeed\":40,\"congestionLevel\":0.53},{\"timestamp\":\"2026-05-28T04:50:00.000Z\",\"vehicleCount\":80,\"averageSpeed\":46,\"congestionLevel\":0.46},{\"timestamp\":\"2026-05-28T04:45:00.000Z\",\"vehicleCount\":85,\"averageSpeed\":45,\"congestionLevel\":0.48}]"
+  },
+  {
+    "name": "Model Town Library Road",
+    "latitude": 29.4010,
+    "longitude": 71.6750,
+    "status": "ACTIVE",
+    "congestionLevel": 0.20,
+    "vehicleCount": 30,
+    "trafficFlowHistory": "[{\"timestamp\":\"2026-05-28T05:00:00.000Z\",\"vehicleCount\":30,\"averageSpeed\":58,\"congestionLevel\":0.20},{\"timestamp\":\"2026-05-28T04:55:00.000Z\",\"vehicleCount\":35,\"averageSpeed\":56,\"congestionLevel\":0.23},{\"timestamp\":\"2026-05-28T04:50:00.000Z\",\"vehicleCount\":25,\"averageSpeed\":62,\"congestionLevel\":0.17},{\"timestamp\":\"2026-05-28T04:45:00.000Z\",\"vehicleCount\":20,\"averageSpeed\":65,\"congestionLevel\":0.14}]"
+  },
+  {
+    "name": "Bahawalpur Airport Access Rd & Bypass",
+    "latitude": 29.3400,
+    "longitude": 71.7800,
+    "status": "ACTIVE",
+    "congestionLevel": 0.55,
+    "vehicleCount": 110,
+    "trafficFlowHistory": "[{\"timestamp\":\"2026-05-28T05:00:00.000Z\",\"vehicleCount\":110,\"averageSpeed\":40,\"congestionLevel\":0.55},{\"timestamp\":\"2026-05-28T04:55:00.000Z\",\"vehicleCount\":115,\"averageSpeed\":38,\"congestionLevel\":0.58},{\"timestamp\":\"2026-05-28T04:50:00.000Z\",\"vehicleCount\":100,\"averageSpeed\":45,\"congestionLevel\":0.50},{\"timestamp\":\"2026-05-28T04:45:00.000Z\",\"vehicleCount\":90,\"averageSpeed\":48,\"congestionLevel\":0.45}]"
+  },
+  {
+    "name": "One Unit Chowk & Stadium Road",
+    "latitude": 29.4040,
+    "longitude": 71.6820,
+    "status": "ACTIVE",
+    "congestionLevel": 0.70,
+    "vehicleCount": 145,
+    "trafficFlowHistory": "[{\"timestamp\":\"2026-05-28T05:00:00.000Z\",\"vehicleCount\":145,\"averageSpeed\":30,\"congestionLevel\":0.70},{\"timestamp\":\"2026-05-28T04:55:00.000Z\",\"vehicleCount\":130,\"averageSpeed\":34,\"congestionLevel\":0.64},{\"timestamp\":\"2026-05-28T04:50:00.000Z\",\"vehicleCount\":120,\"averageSpeed\":38,\"congestionLevel\":0.58},{\"timestamp\":\"2026-05-28T04:45:00.000Z\",\"vehicleCount\":105,\"averageSpeed\":42,\"congestionLevel\":0.52}]"
+  },
+  {
+    "name": "Dubai Chowk & Yazman Road",
+    "latitude": 29.3750,
+    "longitude": 71.7020,
+    "status": "ACTIVE",
+    "congestionLevel": 0.40,
+    "vehicleCount": 65,
+    "trafficFlowHistory": "[{\"timestamp\":\"2026-05-28T05:00:00.000Z\",\"vehicleCount\":65,\"averageSpeed\":50,\"congestionLevel\":0.40},{\"timestamp\":\"2026-05-28T04:55:00.000Z\",\"vehicleCount\":70,\"averageSpeed\":48,\"congestionLevel\":0.44},{\"timestamp\":\"2026-05-28T04:50:00.000Z\",\"vehicleCount\":75,\"averageSpeed\":46,\"congestionLevel\":0.47},{\"timestamp\":\"2026-05-28T04:45:00.000Z\",\"vehicleCount\":60,\"averageSpeed\":52,\"congestionLevel\":0.37}]"
+  },
+  {
+    "name": "Ahmedpur East Highway Road",
+    "latitude": 29.3820,
+    "longitude": 71.6500,
+    "status": "ACTIVE",
+    "congestionLevel": 0.35,
+    "vehicleCount": 55,
+    "trafficFlowHistory": "[{\"timestamp\":\"2026-05-28T05:00:00.000Z\",\"vehicleCount\":55,\"averageSpeed\":52,\"congestionLevel\":0.35},{\"timestamp\":\"2026-05-28T04:55:00.000Z\",\"vehicleCount\":60,\"averageSpeed\":50,\"congestionLevel\":0.38},{\"timestamp\":\"2026-05-28T04:50:00.000Z\",\"vehicleCount\":50,\"averageSpeed\":55,\"congestionLevel\":0.31},{\"timestamp\":\"2026-05-28T04:45:00.000Z\",\"vehicleCount\":45,\"averageSpeed\":58,\"congestionLevel\":0.28}]"
+  },
+  {
+    "name": "Satluj Bridge Road & Toll Plaza",
+    "latitude": 29.4300,
+    "longitude": 71.6700,
+    "status": "ACTIVE",
+    "congestionLevel": 0.60,
+    "vehicleCount": 130,
+    "trafficFlowHistory": "[{\"timestamp\":\"2026-05-28T05:00:00.000Z\",\"vehicleCount\":130,\"averageSpeed\":36,\"congestionLevel\":0.60},{\"timestamp\":\"2026-05-28T04:55:00.000Z\",\"vehicleCount\":120,\"averageSpeed\":40,\"congestionLevel\":0.55},{\"timestamp\":\"2026-05-28T04:50:00.000Z\",\"vehicleCount\":110,\"averageSpeed\":43,\"congestionLevel\":0.50},{\"timestamp\":\"2026-05-28T04:45:00.000Z\",\"vehicleCount\":95,\"averageSpeed\":48,\"congestionLevel\":0.44}]"
+  },
+  {
+    "name": "Rafi Qamar Road & Medical Colony",
+    "latitude": 29.3890,
+    "longitude": 71.7150,
+    "status": "ACTIVE",
+    "congestionLevel": 0.50,
+    "vehicleCount": 85,
+    "trafficFlowHistory": "[{\"timestamp\":\"2026-05-28T05:00:00.000Z\",\"vehicleCount\":85,\"averageSpeed\":44,\"congestionLevel\":0.50},{\"timestamp\":\"2026-05-28T04:55:00.000Z\",\"vehicleCount\":90,\"averageSpeed\":42,\"congestionLevel\":0.53},{\"timestamp\":\"2026-05-28T04:50:00.000Z\",\"vehicleCount\":80,\"averageSpeed\":47,\"congestionLevel\":0.47},{\"timestamp\":\"2026-05-28T04:45:00.000Z\",\"vehicleCount\":75,\"averageSpeed\":50,\"congestionLevel\":0.44}]"
+  }
+]
