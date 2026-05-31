@@ -4,11 +4,11 @@
 ```powershell
 # Choose a folder, e.g. D:\
 cd D:\
-git clone https://github.com/your-org/smart-iot-traffic-management-system.git "Smart IoT Traffic Management System"
+git clone https://github.com/drhasnain751/smart-traffic-mngmnt.git "Smart IoT Traffic Management System"
 ```
 
-## 2️⃣ Use the ready‑made universal `.env`
-The repository now contains a **pre‑populated `.env`** in `backend/.env` that works for anyone on any Windows machine (SQLite, no passwords).
+## 2️⃣ Use the ready-made `.env`
+The repository already includes a **pre-configured backend `.env`** file at `backend/.env`.
 ```dotenv
 # backend/.env
 PORT=5000
@@ -18,55 +18,57 @@ DATABASE_URL="file:./dev.db"
 # Frontend URL used by Vite (must match the backend port)
 VITE_API_URL=http://localhost:5000/api
 ```
-> **Note:** The JWT secret is a placeholder. If you plan to expose the API beyond local testing, replace it with a strong random string.
+> **Note:** The JWT secret is a development placeholder. If this project is used beyond local testing, replace it with a strong random string.
 
-## 3️⃣ Install dependencies (Node + pnpm optional)
+## 3️⃣ Install dependencies
 ```powershell
 # Backend
 cd "Smart IoT Traffic Management System\backend"
-pnpm install    # or: pnpm install
+npm install
 # Frontend
 cd ..\frontend
-pnpm install    # or: npm ci
+npm install
 ```
 
-## 4️⃣ Run database migrations (creates `dev.db` automatically)
+## 4️⃣ Run database setup
 ```powershell
-cd ..\backend
-npx prisma migrate deploy   # creates tables in dev.db
-# (optional) seed data if a seed script exists
-# npx prisma db seed
-```
-
-## 5️⃣ Start the backend & frontend
-Open two PowerShell windows (or use the one‑liner below).
-```powershell
-# Window 1 – backend
 cd "Smart IoT Traffic Management System\backend"
-pnpm run dev   # or: pnpm dev
+npm run prisma:migrate
+# optional seed data
+npm run prisma:seed
+```
+
+## 5️⃣ Start the backend and frontend
+Open two PowerShell windows.
+```powershell
+# Backend
+cd "Smart IoT Traffic Management System\backend"
+npm run dev
 ```
 ```powershell
-# Window 2 – frontend
+# Frontend
 cd "Smart IoT Traffic Management System\frontend"
-pnpm run dev   # or: pnpm dev
-```
-### One‑liner (starts both)
-```powershell
-cd "Smart IoT Traffic Management System"; \
-Start-Process pwsh -ArgumentList "-NoExit","-Command","cd backend; pnpm install; npx prisma migrate deploy; pnpm dev"; \
-cd frontend; pnpm install; pnpm dev
+npm run dev
 ```
 
-## 6️⃣ Verify everything works
-- Open a browser → `http://localhost:5173` (frontend). It should load the UI.
-- Test the health endpoint:
+## 6️⃣ Alternative: start both from the root
+From the repository root:
 ```powershell
-curl http://localhost:5000/api/health
-# Expected: {"status":"ok"}
+cd "Smart IoT Traffic Management System"
+npm run install:all
+npm run dev
 ```
 
-## 7️⃣ Stopping the stack
-- Press **Ctrl + C** in each PowerShell window.
+## 7️⃣ Verify everything works
+- Open a browser at `http://localhost:5173`
+- Confirm the backend API responds at `http://localhost:5000/api/health`
+
+## 8️⃣ Stop the stack
+- Press **Ctrl+C** in each PowerShell window.
 
 ---
-**Sharing**: Send the entire `Smart IoT Traffic Management System` folder (including the `backend/.env` file above) to your friend. No additional configuration is required.
+
+## Notes
+- The backend uses local SQLite by default in `backend/prisma/dev.db`.
+- `backend/.env` is valid for local development.
+- `backend/prisma/dev.db` and `backend/prisma/dev.db-journal` are local files and should not be pushed to GitHub.
